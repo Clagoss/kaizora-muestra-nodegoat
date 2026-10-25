@@ -1,0 +1,157 @@
+[
+ {
+  "archivo": "app/routes/contributions.js",
+  "linea": 32,
+  "categoria": "inyeccion-codigo"
+ },
+ {
+  "archivo": "app/data/allocations-dao.js",
+  "linea": 78,
+  "categoria": "inyeccion-nosql"
+ },
+ {
+  "archivo": "app/routes/research.js",
+  "linea": 15,
+  "categoria": "otra"
+ },
+ {
+  "archivo": "app/routes/research.js",
+  "linea": 25,
+  "categoria": "xss"
+ },
+ {
+  "archivo": "app/routes/index.js",
+  "linea": 72,
+  "categoria": "redireccion-abierta"
+ },
+ {
+  "archivo": "app/routes/index.js",
+  "linea": 63,
+  "categoria": "control-de-acceso"
+ },
+ {
+  "archivo": "app/routes/index.js",
+  "linea": 55,
+  "categoria": "control-de-acceso"
+ },
+ {
+  "archivo": "app/routes/benefits.js",
+  "linea": 15,
+  "categoria": "control-de-acceso"
+ },
+ {
+  "archivo": "app/data/benefits-dao.js",
+  "linea": 25,
+  "categoria": "control-de-acceso"
+ },
+ {
+  "archivo": "app/data/user-dao.js",
+  "linea": 25,
+  "categoria": "criptografia"
+ },
+ {
+  "archivo": "app/data/user-dao.js",
+  "linea": 61,
+  "categoria": "autenticacion"
+ },
+ {
+  "archivo": "app/routes/session.js",
+  "linea": 116,
+  "categoria": "autenticacion"
+ },
+ {
+  "archivo": "app/routes/session.js",
+  "linea": 85,
+  "categoria": "autenticacion"
+ },
+ {
+  "archivo": "app/routes/session.js",
+  "linea": 144,
+  "categoria": "autenticacion"
+ },
+ {
+  "archivo": "app/routes/session.js",
+  "linea": 53,
+  "categoria": "autenticacion"
+ },
+ {
+  "archivo": "app/routes/session.js",
+  "linea": 64,
+  "categoria": "otra"
+ },
+ {
+  "archivo": "server.js",
+  "linea": 137,
+  "categoria": "xss"
+ },
+ {
+  "archivo": "app/views/error-template.html",
+  "linea": 11,
+  "categoria": "otra"
+ },
+ {
+  "archivo": "app/routes/error.js",
+  "linea": 7,
+  "categoria": "otra"
+ },
+ {
+  "archivo": "app/views/memos.html",
+  "linea": 31,
+  "categoria": "xss"
+ },
+ {
+  "archivo": "app/routes/profile.js",
+  "linea": 28,
+  "categoria": "xss"
+ },
+ {
+  "archivo": "app/routes/profile.js",
+  "linea": 64,
+  "categoria": "xss"
+ },
+ {
+  "archivo": "app/routes/profile.js",
+  "linea": 59,
+  "categoria": "otra"
+ },
+ {
+  "archivo": "app/data/profile-dao.js",
+  "linea": 62,
+  "categoria": "criptografia"
+ },
+ {
+  "archivo": "server.js",
+  "linea": 78,
+  "categoria": "configuracion"
+ },
+ {
+  "archivo": "server.js",
+  "linea": 7,
+  "categoria": "csrf"
+ },
+ {
+  "archivo": "server.js",
+  "linea": 10,
+  "categoria": "configuracion"
+ },
+ {
+  "archivo": "config/env/all.js",
+  "linea": 8,
+  "categoria": "secreto-en-codigo"
+ },
+ {
+  "archivo": "config/env/development.js",
+  "linea": 6,
+  "categoria": "secreto-en-codigo"
+ },
+ {
+  "archivo": "config/config.js",
+  "linea": 13,
+  "categoria": "secreto-en-codigo"
+ },
+ {
+  "archivo": "app/routes/index.js",
+  "linea": 41,
+  "categoria": "csrf"
+ }
+]

@@ -1,0 +1,143 @@
+{
+  "id": "nodegoat-seguridad",
+  "repo": "https://github.com/OWASP/NodeGoat",
+  "commit": "c5cb68a7084e4ae7dcc60e6a98768720a81841e8",
+  "licencia": "Apache-2.0 (no se copia código)",
+  "inspector": "inspector-seguridad",
+  "alcance": "app/, config/ y server.js",
+  "nota": "Verdad PARCIAL: 5 defectos que se comprobaron leyendo el código ANTES de ver el resultado del inspector. «confirmadas» son hallazgos fuera de esa lista cuya línea se verificó a mano DESPUÉS (la línea existe y contiene lo que el inspector describe; no se probó cada explotación). Muestra de un solo repo y una sola corrida: no es una cifra de acierto.",
+  "verdad": [
+    {
+      "archivo": "app/routes/contributions.js",
+      "linea": 32,
+      "categoria": "inyeccion-codigo"
+    },
+    {
+      "archivo": "app/data/allocations-dao.js",
+      "linea": 73,
+      "categoria": "inyeccion-nosql"
+    },
+    {
+      "archivo": "app/data/allocations-dao.js",
+      "linea": 78,
+      "categoria": "inyeccion-nosql"
+    },
+    {
+      "archivo": "app/routes/index.js",
+      "linea": 72,
+      "categoria": "redireccion-abierta"
+    },
+    {
+      "archivo": "config/env/all.js",
+      "linea": 8,
+      "categoria": "secreto-en-codigo"
+    }
+  ],
+  "confirmadas": [
+    {
+      "archivo": "app/routes/research.js",
+      "linea": 15,
+      "categoria": "otra"
+    },
+    {
+      "archivo": "app/routes/research.js",
+      "linea": 25,
+      "categoria": "xss"
+    },
+    {
+      "archivo": "app/routes/index.js",
+      "linea": 63,
+      "categoria": "control-de-acceso"
+    },
+    {
+      "archivo": "app/routes/index.js",
+      "linea": 55,
+      "categoria": "control-de-acceso"
+    },
+    {
+      "archivo": "app/data/benefits-dao.js",
+      "linea": 25,
+      "categoria": "control-de-acceso"
+    },
+    {
+      "archivo": "app/data/user-dao.js",
+      "linea": 25,
+      "categoria": "criptografia"
+    },
+    {
+      "archivo": "app/data/user-dao.js",
+      "linea": 61,
+      "categoria": "autenticacion"
+    },
+    {
+      "archivo": "app/routes/session.js",
+      "linea": 85,
+      "categoria": "autenticacion"
+    },
+    {
+      "archivo": "app/routes/session.js",
+      "linea": 144,
+      "categoria": "autenticacion"
+    },
+    {
+      "archivo": "app/routes/session.js",
+      "linea": 64,
+      "categoria": "otra"
+    },
+    {
+      "archivo": "server.js",
+      "linea": 137,
+      "categoria": "xss"
+    },
+    {
+      "archivo": "app/views/memos.html",
+      "linea": 31,
+      "categoria": "xss"
+    },
+    {
+      "archivo": "app/routes/profile.js",
+      "linea": 59,
+      "categoria": "otra"
+    },
+    {
+      "archivo": "app/data/profile-dao.js",
+      "linea": 62,
+      "categoria": "criptografia"
+    },
+    {
+      "archivo": "server.js",
+      "linea": 78,
+      "categoria": "configuracion"
+    },
+    {
+      "archivo": "server.js",
+      "linea": 7,
+      "categoria": "csrf"
+    },
+    {
+      "archivo": "server.js",
+      "linea": 10,
+      "categoria": "configuracion"
+    },
+    {
+      "archivo": "config/env/development.js",
+      "linea": 6,
+      "categoria": "secreto-en-codigo"
+    },
+    {
+      "archivo": "config/config.js",
+      "linea": 13,
+      "categoria": "secreto-en-codigo"
+    },
+    {
+      "archivo": "app/routes/index.js",
+      "linea": 41,
+      "categoria": "csrf"
+    },
+    {
+      "archivo": "app/views/error-template.html",
+      "linea": 11,
+      "categoria": "otra"
+    }
+  ]
+}
