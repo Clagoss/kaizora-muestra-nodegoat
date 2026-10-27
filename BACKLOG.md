@@ -30,7 +30,7 @@
 - **Estado:** nuevo
 - **Archivos:** `app/data/allocations-dao.js:78`
 - **Descripción:** `getByUserIdAndThreshold` arma `{$where: \`this.userId == ${parsedUserId} && this.stocks > '${threshold}'\`}` con `threshold` sin validar (línea 78): permite inyectar JavaScript en la consulta (por ejemplo `1'; return 1 == '1`). El código trae comentada una versión con `parseInt` y rango 0 a 99.
-- **Hermanos revisados:** La rama de la línea 73 (también `$where`) usa el valor ya convertido a entero: no es explotable con texto, pero conviene dejar una sola forma. Sin otros `$where` en `app/`.
+- **Hermanos revisados:** La línea 73 (también `$where`, con el valor convertido a entero) está dentro de un comentario en bloque (`/* ... */`, líneas 63-76): nunca se ejecuta, no es una rama viva. Sin otros `$where` en `app/`.
 - **Criterios de aceptación:** `threshold` se convierte con `parseInt` y se valida en rango; un texto con comillas responde 400; ninguna consulta usa `$where` con datos del usuario.
 - **Riesgo si se toca:** Medio: cambia el filtro de una pantalla; probar con valores límite.
 - **Auto-resoluble:** no
