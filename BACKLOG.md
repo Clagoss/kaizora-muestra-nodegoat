@@ -1,10 +1,12 @@
 # BACKLOG — loop de mejora continua
 
-**Próximo ID:** BL-0024
+**Próximo ID:** BL-0037 (BL-0024 a BL-0036 los ocupó la segunda área, UX: ver `BACKLOG-UX.md`)
 
 > **Muestra real, no un caso de éxito.** El inspector de seguridad de Kaizora sobre OWASP NodeGoat (Apache-2.0, commit `c5cb68a`), el 2026-10-25. NodeGoat es una aplicación pública y famosa hecha para ser vulnerable, y el modelo probablemente la conoce de su entrenamiento: es el caso fácil (incluso hay comentarios en el código que marcan los defectos).
 >
 > **De 31 hallazgos a 23 ítems.** 25 hallazgos se verificaron a mano contra el código (la línea existe y contiene lo descrito) y se agruparon por defecto (por ejemplo, el SSRF y la respuesta sin escapar de `research.js` son un ítem; la contraseña en texto plano guardada y comparada, otro): 23 ítems. Los otros 6 no se pudieron confirmar y **no se anotaron**: un hallazgo sin comprobar no entra al backlog. Detalle en `evaluaciones/`.
+>
+> **Segunda área sobre el mismo banco:** el inspector de UX corrió sobre este mismo commit, el 2026-11-14 — ver `BACKLOG-UX.md`.
 
 ## Items
 

@@ -4,14 +4,17 @@ Este repositorio publica **solo los resultados** de una corrida del inspector de
 [Kaizora](https://carloslagos.cl/kaizora/) sobre [OWASP NodeGoat](https://github.com/OWASP/NodeGoat), una
 aplicación pública hecha para ser vulnerable. No contiene el producto Kaizora ni el código de NodeGoat.
 
-> **In English:** raw results of one run of Kaizora's security inspector (a set of Claude Code agents) on OWASP
-> NodeGoat: the HTML report, the 23-item backlog and the ground truth written before the run. 4 of 5 reference
-> defects found, 31 findings, 25 checked by hand. One run on an easy, well-known repo; not an accuracy rate.
-> The report and the agents are written in Spanish.
+> **In English:** raw results of two runs of Kaizora (a set of Claude Code agents) on OWASP NodeGoat, same
+> commit: the security inspector (HTML report, 23-item backlog, ground truth written before the run — 4 of 5
+> reference defects found, 31 findings, 25 checked by hand) and, added later, the UX inspector (13 findings,
+> headless run, $2.77, 5m25s — UX has no pre-labeled ground truth, so this one reports verification tiers
+> instead of an accuracy rate). Neither run is an accuracy rate on its own. The report, the backlogs and the
+> agents are written in Spanish.
 
 - `informe/informe.html`: el informe de mejora continua tal como lo genera Kaizora (HTML autocontenido; las fuentes están en `informe/fuentes/`).
-- `BACKLOG.md`: los 23 ítems que salieron, cada uno con descripción, evidencia, criterios de aceptación y riesgo.
-- `evaluacion/`: el caso (repositorio, commit exacto y la verdad de referencia escrita **antes** de ver el resultado) y los hallazgos crudos del inspector.
+- `BACKLOG.md`: los 23 ítems de **seguridad**, cada uno con descripción, evidencia, criterios de aceptación y riesgo.
+- `BACKLOG-UX.md`: los 13 ítems de **UX**, del inspector de UX sobre el mismo commit, corrido después y sin terminal interactiva.
+- `evaluacion/`: el caso (repositorio, commit exacto y la verdad de referencia escrita **antes** de ver el resultado) y los hallazgos crudos del inspector de seguridad.
 
 ## Las cifras, crudas
 
@@ -32,6 +35,28 @@ Una corrida, un inspector, sobre el commit `c5cb68a7084e4ae7dcc60e6a98768720a818
 - «Verificado» significa que la línea existe y contiene lo que el inspector describe. No se probó cada explotación.
 - Un backlog de 23 ítems sale de 31 hallazgos: solo se anotaron los 25 verificados, agrupando los que apuntan al mismo defecto.
 - El informe, el backlog y los mensajes están en español.
+
+## Segunda área sobre el mismo banco: UX
+
+El inspector de UX y UX writing de Kaizora corrió sobre este mismo commit de NodeGoat, el
+2026-11-14, de forma **headless** (`claude -p`, sin terminal interactiva ni supervisión humana
+durante la corrida). Detalle completo, con el método de cada hallazgo y los tres niveles de
+verificación, en [`BACKLOG-UX.md`](BACKLOG-UX.md).
+
+| Medida | Resultado |
+|---|---|
+| Hallazgos que entraron al backlog | 13 |
+| Verificación independiente (otro proceso reabrió el archivo después) | 2 de 13 |
+| Verificación del propio inspector al escribirlos | 7 de 13 |
+| Verificación estándar (sin segunda pasada) | 4 de 13 |
+| Costo medido | US$ 2,77 |
+| Duración de reloj | 5 min 25 s, sin espera humana |
+
+**Por qué no hay un «X de Y defectos» como en seguridad:** NodeGoat documenta su OWASP Top 10 a
+propósito; no documenta sus problemas de UX. No hay una verdad de referencia contra la que medir
+una tasa de acierto, así que esta muestra no la reporta — reporta, en cambio, cómo se verificó
+cada hallazgo (la tabla de niveles, arriba y en `BACKLOG-UX.md`). De los 13, solo 2 pasaron por un
+control genuinamente separado del que los escribió.
 
 ## Otra muestra y el producto
 
